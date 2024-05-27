@@ -19,17 +19,17 @@ public class DefaultCountingOutRhymer {
     }
 
     public boolean callCheck() {
-        return total == EMPTY;
+        return getTotal() == EMPTY;
     }
 
     public boolean isFull() {
-        return total == MAX_SIZE - 1;
+        return getTotal() == MAX_SIZE - 1;
     }
 
     protected int peekaboo() {
         if (callCheck())
             return PEEKABOO_MIN;
-        return numbers[total];
+        return numbers[getTotal()];
     }
 
     public int countOut() {
